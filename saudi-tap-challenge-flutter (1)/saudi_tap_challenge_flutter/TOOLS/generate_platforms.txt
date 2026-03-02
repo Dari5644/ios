@@ -1,0 +1,8 @@
+إذا ما عندك مجلدات ios/android (لأن هذه الحزمة تركّز على الكود):
+1) ثبّت Flutter
+2) داخل نفس المجلد شغّل:
+   flutter create .
+هذا ينشئ android/ios/web/macos/windows/linux تلقائيًا بدون ما يغير lib/
+بعدها:
+   flutter pub get
+   flutter run
