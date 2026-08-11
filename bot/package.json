@@ -1,0 +1,19 @@
+{
+  "name": "mw3-arena-bot",
+  "version": "1.0.0",
+  "description": "Discord Bot - يقرأ إعداداته حياً من ملف database.sqlite المشترك مع الباك إند",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "better-sqlite3": "^11.1.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
