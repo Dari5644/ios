@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة الكلاسات | لوحة التحكم</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <div class="container" style="max-width:640px;">
+    <h2>🎯 إدارة الكلاسات</h2>
+
+    <form class="glass-panel" id="classForm">
+      <label>اسم الكلاس</label>
+      <input id="name" required>
+      <label>الفئة (مثال: primary_weapon)</label>
+      <input id="category" value="primary_weapon">
+      <label>المجموعة الحصرية (اختياري - لمنع التعارض)</label>
+      <input id="exclusiveGroup" value="primary_slot">
+      <label>الوصف</label>
+      <textarea id="description"></textarea>
+      <button type="submit" class="btn-primary">إضافة كلاس</button>
+    </form>
+
+    <div id="classList" style="margin-top:20px;"></div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="api.js"></script>
+  <script src="navbar.js"></script>
+  <script src="admin-classes.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إعدادات البوت | لوحة التحكم</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <div class="container" style="max-width:480px;">
+    <h2>⚙️ إعدادات بوت الديسكورد</h2>
+    <form class="glass-panel" id="botForm">
+      <label>Bot Token</label>
+      <input type="password" id="botToken" placeholder="••••••••">
+
+      <label>Client ID</label>
+      <input id="clientId">
+
+      <label>Guild ID (أيدي السيرفر)</label>
+      <input id="guildId">
+
+      <label>قناة إشعار ترقية اللفل (اختياري)</label>
+      <input id="levelUpChannelId">
+
+      <label style="display:flex;align-items:center;gap:8px;">
+        <input type="checkbox" id="isEnabled" style="width:auto;margin:0;"> تفعيل البوت
+      </label>
+
+      <button type="submit" class="btn-primary">حفظ الإعدادات</button>
+      <p id="status" style="font-size:14px;margin-top:10px;"></p>
+    </form>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="api.js"></script>
+  <script src="navbar.js"></script>
+  <script src="admin-bot-settings.js"></script>
+</body>
+</html>

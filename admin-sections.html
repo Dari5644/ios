@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محرر الأقسام | لوحة التحكم</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <div class="container" style="max-width:900px;">
+    <h2>🧩 محرر الأقسام الديناميكية</h2>
+    <div class="admin-layout">
+      <aside class="glass-panel card">
+        <h4 style="margin-top:0;">الأقسام</h4>
+        <div id="sectionsList"></div>
+        <form id="newSectionForm" style="border-top:1px solid var(--teal-100);padding-top:10px;margin-top:10px;">
+          <input id="newTitle" placeholder="عنوان القسم" required style="font-size:13px;padding:8px;">
+          <input id="newSlug" placeholder="الرابط (slug)" required style="font-size:13px;padding:8px;">
+          <button class="btn-primary" style="width:100%;padding:8px;font-size:13px;">+ إضافة قسم جديد</button>
+        </form>
+      </aside>
+
+      <section>
+        <div id="editorEmpty" style="color:var(--text-soft);">اختر قسماً من القائمة لبدء التعديل المرئي عليه.</div>
+        <div id="editorArea" style="display:none;">
+          <div style="display:flex;gap:8px;margin-bottom:14px;">
+            <button class="tab-btn" onclick="addBlock('text')">+ نص</button>
+            <button class="tab-btn" onclick="addBlock('image')">+ صورة</button>
+            <button class="tab-btn" onclick="addBlock('card')">+ بطاقة</button>
+          </div>
+          <div id="blocksList"></div>
+          <button class="btn-primary" onclick="saveBlocks()" style="margin-top:14px;">💾 حفظ ونشر التعديلات</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="api.js"></script>
+  <script src="navbar.js"></script>
+  <script src="admin-sections.js"></script>
+</body>
+</html>
